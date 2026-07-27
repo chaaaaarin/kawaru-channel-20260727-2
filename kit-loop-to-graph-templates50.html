@@ -1,0 +1,457 @@
+<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>業務ループ→グラフ移行テンプレート50選</title><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet"><style>
+:root{--brand:#1C3461;--brand-deep:#16284A;--brand-soft:rgba(28,52,97,.08);--accent:#5BBCD4;--accent-deep:#2C7A93;
+--bg:#F7FAFC;--paper:#FFFFFF;--ink:#1C3461;--ink-mid:#4A6080;--line:rgba(28,52,97,.12);--head:'Noto Sans JP';}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',-apple-system,'Hiragino Sans',sans-serif;line-height:1.7;}
+.wrap{max-width:960px;margin:0 auto;background:var(--paper);min-height:100vh;}
+header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:2px solid var(--brand);padding:16px 28px;}
+header .top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+header svg.logo-ic{color:var(--brand);}
+header .ttl{font-family:var(--head);font-weight:900;font-size:20px;color:var(--brand-deep);line-height:1.2;}
+header .ttl small{display:block;font-size:12px;color:var(--ink-mid);font-weight:500;}
+.badge{display:inline-block;background:var(--brand);color:#fff;font-family:var(--head);font-weight:900;font-size:13px;border-radius:999px;padding:4px 14px;}
+.hbtns{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent);border:2px solid var(--brand);color:var(--ink);
+border-radius:999px;padding:8px 18px;font-weight:900;font-size:14px;cursor:pointer;text-decoration:none;font-family:'Noto Sans JP';}
+.btn.ghost{background:var(--paper);border:1.5px solid var(--line);color:var(--brand-deep);}
+.btn.sm{padding:6px 14px;font-size:13px;}
+main{padding:24px 28px 60px;}
+.lead{font-size:15px;color:var(--ink-mid);margin-bottom:18px;}
+h2.cat{font-family:var(--head);font-weight:900;font-size:22px;color:var(--ink);margin:30px 0 14px;padding-left:12px;border-left:5px solid var(--brand);}
+.icard{background:var(--paper);border:1.5px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:16px 18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+.ititle{font-family:var(--head);font-weight:900;font-size:17px;color:var(--ink);margin-bottom:5px;}
+.imeta{font-size:12.5px;color:var(--ink-mid);margin-bottom:10px;}
+pre.prompt{background:var(--ink);color:#ECECEA;border-radius:10px;padding:14px 16px;white-space:pre-wrap;word-break:break-word;
+font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.65;max-height:340px;overflow-y:auto;margin-bottom:10px;}
+.cbtns{display:flex;gap:8px;flex-wrap:wrap;}
+.hidden{display:none!important;}
+.nb{display:inline-block;}
+footer{padding:26px 28px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-mid);text-align:center;}
+footer a{color:var(--brand-deep);}
+@media(max-width:600px){main{padding:18px 16px 50px;}header{padding:12px 16px;}}
+</style></head><body><div class="wrap">
+<svg style="display:none">
+  <symbol id="kawaru-logo-mini" viewBox="0 0 406 93">
+    <rect x="6.67572e-06" y="13.4815" width="7.93029" height="74.5447" fill="currentColor"/>
+    <path d="M18.2397 52.7235L24.2772 47.5817L57.8911 88.0582L48.3318 88.0582L18.2397 52.7235Z" fill="#5BBCD4"/>
+    <path d="M34.8933 49.5514L40.9308 44.4096L77.2278 88.0366L67.4075 88.0262L34.8933 49.5514Z" fill="#5BBCD4"/>
+    <rect x="57.1908" y="2.92276" width="7.93029" height="83.5485" transform="rotate(42.3764 57.1908 2.92276)" fill="currentColor"/>
+    <rect x="59.4772" width="7.93029" height="22.2048" fill="currentColor"/>
+    <rect x="44.4096" y="7.9303" width="7.93029" height="22.9978" transform="rotate(-90 44.4096 7.9303)" fill="currentColor"/>
+  </symbol>
+</svg>
+<header><div class="top">
+<svg class="logo-ic" width="40" height="40" viewBox="0 0 66 93"><use href="#kawaru-logo-mini"/></svg>
+<div class="ttl">業務ループ→グラフ移行テンプレート50選<small>AIエージェント/Kawaru・プレゼント</small></div><span class="badge">50個</span>
+<div class="hbtns"><a class="btn ghost" href="./present.html">← 一覧へ</a><button class="btn" onclick="downloadText('pfull','loop-to-graph-templates50.md',this)">⬇ 全件ダウンロード</button></div>
+</div></header><main>
+<p class="lead"><span class="nb">全50項目。</span><span class="nb">各カードのボタンから個別にコピー、</span><span class="nb">上部から全件ダウンロードできます。</span><span class="nb">業務内容に合わせて固有名詞を</span><span class="nb">書き換えてから使ってください。</span></p>
+<h2 class="cat">SEO記事作成</h2>
+<div class="icard"><div class="ititle">1. キーワード調査と執筆の分割</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 1人のループが</span><span class="nb">キーワード選定→リサーチ→執筆→チェックまで</span><span class="nb">全部担当</span><br>After<span class="nb">（グラフ）</span><span class="nb">: リサーチ担当／執筆担当／チェック担当／統合担当の</span><span class="nb">4人に分割</span></div><pre class="prompt" id="p1">今、SEO記事作成を1つのループ（キーワード選定→リサーチ→執筆→チェックまで1人で担当）で回しています。これを次のように担当分割したグラフ構成に直してください。
+① リサーチ担当：キーワード調査・競合分析だけをループ
+② 執筆担当：構成案と本文執筆だけをループ
+③ チェック担当：品質採点・修正指示だけをループ（リサーチ担当とは独立した視点で採点）
+④ 統合担当：①〜③の結果を受け取り最終稿にまとめる
+各担当のSKILL.mdの叩き台と、担当間で何を・どんな形式で受け渡すかを提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p1',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p1','template-1.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">2. 執筆とファクトチェックの分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 執筆者が自分の書いた文章を自分で</span><span class="nb">ファクトチェックしている</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 執筆担当と、</span><span class="nb">独立したファクトチェック担当に分離</span></div><pre class="prompt" id="p2">SEO記事の執筆を1人のループで行い、事実確認も同じ担当がその場で行っています。これを、執筆担当とは別に独立したファクトチェック担当を置くグラフ構成に変えてください。ファクトチェック担当は執筆担当の主張を1件ずつ検証し、根拠が薄い箇所には差し戻しラベルを付けて執筆担当に戻す設計にしてください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p2',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p2','template-2.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">3. 公開後リライト判断の独立検証化</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 公開後の順位・</span><span class="nb">アクセスを見て、</span><span class="nb">書いた本人がリライトするか判断</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 分析担当がリライト要否を判定し、</span><span class="nb">執筆担当に指示を出す形に分離</span></div><pre class="prompt" id="p3">公開済み記事の順位・アクセスを見てリライトするか判断する作業を、担当を分けたグラフ構成にしたいです。①分析担当：GA/GSCのデータを見てリライト要否を判定するループ ②執筆担当：分析担当からの指示だけを受けてリライトするループ、の2担当に分ける設計案をSKILL.md形式で提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p3',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p3','template-3.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">4. 複数記事の並列量産</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 1本ずつ順番に記事を</span><span class="nb">作成しているため月産本数が頭打ち</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 記事ごとに独立したループを並列で</span><span class="nb">走らせる構成</span></div><pre class="prompt" id="p4">SEO記事を1本ずつ順番に作成していて量産のボトルネックになっています。3〜5本を同時並列で進められるグラフ構成（記事ごとに独立したリサーチ→執筆→チェックのループを持たせ、最後に横断でカニバリゼーションチェックする担当を1つ置く）を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p4',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p4','template-4.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">5. 内部リンク設計の専任化</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 執筆担当が本文執筆のついでに</span><span class="nb">内部リンクも手動で選定</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 内部リンク専任担当が全記事を</span><span class="nb">横断してリンク設計する構成に分離</span></div><pre class="prompt" id="p5">内部リンクの選定を執筆担当が片手間でやっており精度が低いです。執筆担当とは別に、全記事のテーマ・キーワードを横断的に把握して内部リンクだけを設計する専任担当を置くグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p5',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p5','template-5.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">カスタマー対応</h2>
+<div class="icard"><div class="ititle">6. 一次受付とエスカレーション判定の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 1人がすべての問い合わせに</span><span class="nb">対応し、</span><span class="nb">難しい案件も自分で判断</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 一次受付担当が振り分け、</span><span class="nb">難易度が</span><span class="nb">高い案件だけエスカレーション担当に</span><span class="nb">渡す構成</span></div><pre class="prompt" id="p6">カスタマー対応を1つのループで、すべての問い合わせに同じ担当が対応しています。一次受付担当（定型対応・振り分け判定）とエスカレーション担当（複雑案件のみ対応）に分けるグラフ構成を、振り分け基準案つきで提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p6',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p6','template-6.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">7. FAQ回答と感情ケアの分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 事実確認と、</span><span class="nb">クレーム時の感情的なケアを同じ担当が</span><span class="nb">同時にこなす</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 事実回答担当と、</span><span class="nb">トーン・</span><span class="nb">感情面をケアする担当を分離</span></div><pre class="prompt" id="p7">クレーム対応で、事実の確認・回答と、お客様の感情面のケアを同じ担当が同時にやっていて文面がちぐはぐになりがちです。事実確認担当が下書きを作り、感情ケア担当がトーンを調整する2段階のグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p7',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p7','template-7.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">8. 複数チャネルの並列処理</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: メール・</span><span class="nb">チャット・</span><span class="nb">SNSの問い合わせを1人が順番に処理</span><br>After<span class="nb">（グラフ）</span><span class="nb">: チャネルごとの担当に分割し、</span><span class="nb">並列で処理する構成</span></div><pre class="prompt" id="p8">メール・チャット・SNSからの問い合わせを1人が順番に処理していて対応が遅れています。チャネルごとに専任担当を置き並列処理し、最後に対応ログを統合担当がまとめるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p8',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p8','template-8.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">9. クレーム対応の第三者レビュー</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 対応した本人が、</span><span class="nb">自分の対応が</span><span class="nb">適切だったか自己評価している</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 対応担当とは別のレビュー担当が</span><span class="nb">対応後に評価する構成</span></div><pre class="prompt" id="p9">クレーム対応後、対応した本人が自分の対応を自己評価しており、甘くなりがちです。対応担当とは別に、対応ログをレビューする第三者担当を置き、改善点をフィードバックするループを追加するグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p9',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p9','template-9.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">10. よくある質問の自動更新ループ</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: FAQページの更新が手つかずで</span><span class="nb">放置されがち</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 問い合わせ収集担当と</span><span class="nb">FAQ更新担当を分け、</span><span class="nb">定期的に反映する構成</span></div><pre class="prompt" id="p10">問い合わせ対応の中から『よくある質問』を拾ってFAQページに反映する作業が手つかずです。問い合わせを収集・分類する担当と、それを基にFAQページを更新する担当を分けた、週次で回るグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p10',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p10','template-10.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">経理処理</h2>
+<div class="icard"><div class="ititle">11. 経費精算とチェックの分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 申請内容の入力チェックと</span><span class="nb">承認判断を同じ担当が行う</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 入力チェック担当と承認判断担当を</span><span class="nb">分離</span></div><pre class="prompt" id="p11">経費精算業務で、申請内容のフォーマットチェックと、金額・妥当性の承認判断を同じ担当がまとめて行っています。フォーマットチェック担当（機械的な項目チェック）と承認判断担当（金額・妥当性の判断）に分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p11',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p11','template-11.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">12. 請求書発行と入金確認の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 同じ担当が請求書発行から</span><span class="nb">入金確認まで一貫して追いかける</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 発行担当と入金確認担当を分け、</span><span class="nb">突合担当が最後にマッチングする構成</span></div><pre class="prompt" id="p12">請求書の発行から入金確認までを1人が一貫して追いかけており、件数が増えると漏れが出ます。発行担当・入金確認担当・突合担当（発行データと入金データを照合）の3担当に分けるグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p12',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p12','template-12.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">13. 月次締め作業の並列化</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 月末に部門ごとの集計を順番に</span><span class="nb">処理していて締めが遅い</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 部門ごとに担当を分け並列集計し、</span><span class="nb">最後に全体統合する構成</span></div><pre class="prompt" id="p13">月次締め作業で部門ごとの集計を順番に処理しており時間がかかっています。部門ごとに集計担当を分けて並列処理し、最後に統合担当が全社分をまとめるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p13',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p13','template-13.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">14. 不正検知の独立検証担当</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 経費申請の処理担当が、</span><span class="nb">不正の疑いも同時にチェックしている</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 処理担当とは別に、</span><span class="nb">パターン分析で不正兆候を</span><span class="nb">検知する担当を分離</span></div><pre class="prompt" id="p14">経費申請の日常処理をしている担当が、不正の兆候チェックも兼務していて見落としが心配です。日常処理担当とは独立して、申請パターンの異常値を検知する担当を置くグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p14',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p14','template-14.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">15. 複数取引先の並列処理</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 取引先ごとの支払処理を1つの</span><span class="nb">ループで順番にこなす</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 取引先グループごとに担当を</span><span class="nb">分け並列処理する構成</span></div><pre class="prompt" id="p15">多数の取引先への支払処理を1つのループで順番にこなしていて締切に追われます。取引先をグループ分けし、グループごとの担当が並列で処理するグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p15',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p15','template-15.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">採用選考</h2>
+<div class="icard"><div class="ititle">16. 書類選考と面接評価の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 同じ担当が書類選考から</span><span class="nb">面接評価まで一貫して判断</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 書類選考担当と面接評価担当を</span><span class="nb">分け、</span><span class="nb">視点の異なる判断にする構成</span></div><pre class="prompt" id="p16">採用選考で、書類選考も面接評価も同じ担当が一貫して行っており、視点が偏りがちです。書類選考担当（スキル・経歴のスクリーニング）と面接評価担当（独立した評価軸で判断）に分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p16',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p16','template-16.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">17. 複数媒体からの応募並列収集</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 求人媒体ごとの応募を1人が順番に</span><span class="nb">チェック</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 媒体ごとの収集担当を置き、</span><span class="nb">並列で一次スクリーニングする構成</span></div><pre class="prompt" id="p17">複数の求人媒体からの応募を1人が順番にチェックしており対応が遅れます。媒体ごとに収集・一次スクリーニング担当を置き並列処理し、統合担当が候補者リストをまとめるグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p17',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p17','template-17.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">18. 一次面接官と最終判定の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 同じ面接官が一次面接から</span><span class="nb">最終合否判断まで担当</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 一次面接担当と最終判定担当を</span><span class="nb">分け、</span><span class="nb">独立した視点を確保する構成</span></div><pre class="prompt" id="p18">一次面接から最終合否判断までを同じ担当者が行っており、第一印象に引きずられがちです。一次面接担当と、その記録だけを見て最終判定する担当を分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p18',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p18','template-18.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">19. リファレンスチェックの独立担当</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 面接担当がリファレンスチェックも</span><span class="nb">兼務している</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 面接担当とは別に</span><span class="nb">リファレンスチェック専任担当を</span><span class="nb">置く構成</span></div><pre class="prompt" id="p19">面接担当がリファレンスチェックも兼務しており負荷が高いです。面接担当とは独立してリファレンスチェックだけを行う担当を置き、結果を最終判定担当に渡すグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p19',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p19','template-19.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">20. 内定者フォローの継続ループ</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 内定を出した後のフォローが</span><span class="nb">手薄になりがち</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 採用担当とは別に</span><span class="nb">内定者フォロー専任のループを</span><span class="nb">常設する構成</span></div><pre class="prompt" id="p20">内定を出した後のフォローが属人化し、辞退につながっています。選考担当とは別に、内定から入社日まで定期的にフォローする専任ループ（トリガー：内定日／タスク：定期連絡／成功基準：入社確約の維持）を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p20',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p20','template-20.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">SNS運用</h2>
+<div class="icard"><div class="ititle">21. 投稿作成と炎上チェックの分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 投稿を作った本人がその</span><span class="nb">まま公開判断もしている</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 投稿作成担当と、</span><span class="nb">公開前にリスクチェックする担当を分離</span></div><pre class="prompt" id="p21">SNS投稿を作成した本人がそのまま公開判断もしており、炎上リスクの見落としが心配です。投稿作成担当と、公開前にリスク・炎上要因をチェックする担当を分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p21',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p21','template-21.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">22. 複数プラットフォームの並列投稿</div><div class="imeta">Before<span class="nb">（ループ）</span>: X・Instagram・<span class="nb">TikTokへの投稿を1人が順番に</span><span class="nb">作成</span><br>After<span class="nb">（グラフ）</span><span class="nb">: プラットフォームごとの担当を</span><span class="nb">置き並列で最適化する構成</span></div><pre class="prompt" id="p22">X・Instagram・TikTokへの投稿を1人が順番に作成しており、各媒体の特性に合わせきれていません。プラットフォームごとに担当を分け、それぞれの文脈に最適化した投稿を並列で作るグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p22',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p22','template-22.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">23. コメント対応とインフルエンサー対応の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 一般コメントへの返信と、</span><span class="nb">インフルエンサーからの言及対応を</span><span class="nb">同じ担当が処理</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 一般コメント対応担当と、</span><span class="nb">重要アカウント対応担当を分離</span></div><pre class="prompt" id="p23">一般コメントへの返信と、インフルエンサーなど重要アカウントからの言及への対応を同じ担当が処理しており、後者が埋もれがちです。一般コメント対応担当と、フォロワー数等で重要度が高い言及だけを扱う担当を分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p23',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p23','template-23.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">24. 効果測定の独立検証</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 投稿担当が自分の投稿の効果も</span><span class="nb">自己評価している</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 投稿担当とは別に、</span><span class="nb">数値だけを見て評価する分析担当を分離</span></div><pre class="prompt" id="p24">投稿を作った担当が、自分の投稿の効果測定も行っており評価が甘くなりがちです。投稿担当とは独立して、エンゲージメント数値だけを見て評価する分析担当を置くグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p24',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p24','template-24.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">25. トレンド収集の常時ループ</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 投稿ネタ探しをその都度手動で</span><span class="nb">行っている</span><br>After<span class="nb">（グラフ）</span><span class="nb">: トレンド収集担当を常設し、</span><span class="nb">投稿作成担当にネタを供給する構成</span></div><pre class="prompt" id="p25">投稿のネタ探しをその都度手動で行っており、ネタ切れが頻発します。常時トレンドを収集する担当（トリガー：定期実行／タスク：トレンド収集／成功基準：ネタ候補◯件）を置き、投稿作成担当に供給するグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p25',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p25','template-25.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">動画編集</h2>
+<div class="icard"><div class="ititle">26. カット編集とテロップ作成の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 同じ担当がカット編集から</span><span class="nb">テロップ入れまで一貫作業</span><br>After<span class="nb">（グラフ）</span><span class="nb">: カット担当とテロップ担当を</span><span class="nb">分け並列で進める構成</span></div><pre class="prompt" id="p26">動画編集で、カット編集からテロップ入れまでを同じ担当が一貫して行っており時間がかかります。カット担当とテロップ担当を分け、カット確定後に並列でテロップ作業を進めるグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p26',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p26','template-26.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">27. 本編とサムネイル制作の並列化</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 本編の編集が終わってから</span><span class="nb">サムネイルに着手している</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 本編担当とサムネイル担当を並列で</span><span class="nb">走らせる構成</span></div><pre class="prompt" id="p27">本編の編集が終わってからサムネイル制作に着手しており公開が遅れます。本編担当とサムネイル担当（企画段階の情報だけで並行着手）を並列で走らせるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p27',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p27','template-27.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">28. 音声チェックと画質チェックの分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 1人が音声・</span><span class="nb">画質どちらもまとめて最終チェック</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 音声チェック担当と</span><span class="nb">画質チェック担当を分ける構成</span></div><pre class="prompt" id="p28">動画の最終チェックで音声と画質を1人がまとめて確認しており見落としがあります。音声チェック担当と画質チェック担当に分け、それぞれ専門的な基準でチェックするグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p28',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p28','template-28.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">29. 複数案件の並列進行管理</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 案件を1本ずつ順番に</span><span class="nb">編集しているため納期がひっ迫</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 案件ごとに独立した編集ループを</span><span class="nb">並列で走らせる構成</span></div><pre class="prompt" id="p29">動画案件を1本ずつ順番に編集しており納期がひっ迫しています。案件ごとに独立した編集ループを並列で走らせ、進行管理担当が全体の進捗を横断で見るグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p29',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p29','template-29.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">30. 公開後の反応分析ループ</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 公開後の視聴維持率などの分析が</span><span class="nb">手つかず</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 編集担当とは別に分析担当を置き、</span><span class="nb">次回編集にフィードバックする構成</span></div><pre class="prompt" id="p30">公開後の視聴維持率・離脱ポイントの分析が手つかずになっています。編集担当とは別に、公開後のデータ分析だけを行う担当を置き、その結果を次回編集の改善点として渡すグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p30',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p30','template-30.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">広告運用</h2>
+<div class="icard"><div class="ititle">31. クリエイティブ制作と審査チェックの分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 制作した本人がそのまま媒体の</span><span class="nb">審査基準もチェックしている</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 制作担当と審査基準チェック担当を</span><span class="nb">分離</span></div><pre class="prompt" id="p31">広告クリエイティブを作った本人がそのまま媒体の審査基準チェックも行っており、リジェクトが多発しています。制作担当と、各媒体の審査基準に特化してチェックする担当を分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p31',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p31','template-31.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">32. 複数媒体の並列出稿管理</div><div class="imeta">Before<span class="nb">（ループ）</span>: Google・Meta・<span class="nb">Xへの出稿を1人が順番に設定</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 媒体ごとの運用担当を置き並列で</span><span class="nb">管理する構成</span></div><pre class="prompt" id="p32">Google・Meta・Xへの広告出稿設定を1人が順番に行っており対応が追いつきません。媒体ごとに運用担当を分け並列で管理し、統合担当が全体の予算配分を見るグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p32',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p32','template-32.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">33. 入札調整と予算管理の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 同じ担当が入札調整と</span><span class="nb">全体予算管理を兼務</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 入札調整担当と予算管理担当を</span><span class="nb">分ける構成</span></div><pre class="prompt" id="p33">広告の入札調整と全体の予算管理を同じ担当が兼務しており、日々の調整に追われて全体最適が見えていません。入札調整担当（日々の細かい調整）と予算管理担当（週次の全体配分判断）に分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p33',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p33','template-33.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">34. 効果検証の独立担当</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 運用担当が自分の運用結果を</span><span class="nb">自己評価している</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 運用担当とは別に、</span><span class="nb">数値だけを見る効果検証担当を分離</span></div><pre class="prompt" id="p34">広告運用担当が自分の運用結果を自己評価しており、都合よく解釈しがちです。運用担当とは独立して、数値データだけを見て効果検証する担当を置くグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p34',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p34','template-34.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">35. クリエイティブの自動差し替えループ</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 疲弊したクリエイティブの</span><span class="nb">差し替えが後手に回る</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 監視担当が疲弊を検知し、</span><span class="nb">制作担当に差し替え指示を出す構成</span></div><pre class="prompt" id="p35">広告クリエイティブが疲弊（CTR低下）しても差し替えが後手に回っています。指標を常時監視する担当と、疲弊を検知したら新規クリエイティブを作る担当を分けた常時ループのグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p35',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p35','template-35.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">営業事務</h2>
+<div class="icard"><div class="ititle">36. 見積作成と承認確認の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 見積を作成した担当がその</span><span class="nb">まま承認可否も判断</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 見積作成担当と承認確認担当を分離</span></div><pre class="prompt" id="p36">見積書の作成と、社内承認可否の確認を同じ担当が行っており、チェックが甘くなりがちです。見積作成担当と、金額・条件の妥当性を確認する承認確認担当を分けるグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p36',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p36','template-36.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">37. 複数案件の並列進捗管理</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 案件ごとの進捗確認を1人が順番に</span><span class="nb">行っている</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 案件担当ごとに分け、</span><span class="nb">統括担当が横断で全体を見る構成</span></div><pre class="prompt" id="p37">複数の営業案件の進捗確認を1人が順番に行っており抜け漏れが心配です。案件担当ごとにフォローを分担し、統括担当が全案件の進捗を横断で確認するグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p37',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p37','template-37.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">38. 契約書チェックの独立担当</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 営業担当が契約書の内容チェックも</span><span class="nb">自分で行う</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 営業担当とは別に</span><span class="nb">契約書チェック専任担当を置く構成</span></div><pre class="prompt" id="p38">営業担当が契約書の内容チェックも自分で行っており、リスク条項の見落としが心配です。営業担当とは独立して契約書の条項をチェックする専任担当を置くグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p38',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p38','template-38.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">39. 顧客フォローの継続ループ</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 受注後の顧客フォローが</span><span class="nb">手薄になりがち</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 営業担当とは別に、</span><span class="nb">フォロー専任の常設ループを置く構成</span></div><pre class="prompt" id="p39">受注後の顧客フォローが後回しになり、リピートにつながっていません。新規営業担当とは別に、既存顧客への定期フォローだけを行う常設ループ（トリガー：定期実行／タスク：状況確認連絡／成功基準：継続意向の確認）を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p39',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p39','template-39.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">40. 失注理由の分析担当分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 営業担当が自分の失注理由を</span><span class="nb">自己分析している</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 営業担当とは別に失注理由を</span><span class="nb">横断分析する担当を分離</span></div><pre class="prompt" id="p40">失注理由の分析を営業担当本人が行っており、自己都合の解釈になりがちです。営業担当とは独立して、複数案件の失注理由を横断的に分析する担当を置くグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p40',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p40','template-40.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">人事労務</h2>
+<div class="icard"><div class="ititle">41. 勤怠チェックと給与計算の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 同じ担当が勤怠の異常チェックと</span><span class="nb">給与計算を一貫処理</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 勤怠チェック担当と給与計算担当を</span><span class="nb">分ける構成</span></div><pre class="prompt" id="p41">勤怠の異常チェックと給与計算を同じ担当が一貫して処理しており、繁忙期にミスが増えます。勤怠チェック担当（異常値の検出）と給与計算担当（確定した勤怠データの計算処理）に分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p41',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p41','template-41.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">42. 複数拠点の並列処理</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 拠点ごとの労務処理を1人が順番に</span><span class="nb">こなす</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 拠点ごとの担当を</span><span class="nb">置き並列処理する構成</span></div><pre class="prompt" id="p42">複数拠点の労務処理を1人が順番にこなしており月末に処理が集中します。拠点ごとに担当を分け並列処理し、統合担当が全社データをまとめるグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p42',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p42','template-42.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">43. 問い合わせ対応と規定改定の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 日々の問い合わせ対応をしなが</span><span class="nb">ら規定改定の検討も同時進行</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 問い合わせ対応担当と</span><span class="nb">規定改定検討担当を分ける構成</span></div><pre class="prompt" id="p43">従業員からの日々の問い合わせ対応をしながら、就業規則の改定検討も同時に進めており、どちらも中途半端になっています。日々の問い合わせ対応担当と、規定改定を専任で検討する担当に分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p43',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p43','template-43.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">44. 入退社手続きの並列進行</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 入社手続きと退社手続きを1人が</span><span class="nb">順番に処理</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 入社担当と退社担当を分け並列で</span><span class="nb">進める構成</span></div><pre class="prompt" id="p44">入社手続きと退社手続きを1人が順番に処理しており、繁忙期（期初・期末）に対応が遅れます。入社手続き担当と退社手続き担当を分け、並列で進めるグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p44',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p44','template-44.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">45. 労務相談の独立エスカレーション</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 一般的な問い合わせと、</span><span class="nb">ハラスメント等の重い相談を同じ窓口で</span><span class="nb">対応</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 一次窓口担当と、</span><span class="nb">専門対応が必要な相談の</span><span class="nb">エスカレーション担当を分離</span></div><pre class="prompt" id="p45">一般的な問い合わせと、ハラスメント等の重い相談を同じ窓口担当がまとめて対応しており対応品質にばらつきがあります。一次窓口担当（振り分け）と、重い相談だけを専門的に扱うエスカレーション担当に分けるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p45',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p45','template-45.md',this)">⬇ ダウンロード</button></div></div>
+<h2 class="cat">在庫管理</h2>
+<div class="icard"><div class="ititle">46. 発注判断と入荷確認の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 同じ担当が発注判断から</span><span class="nb">入荷確認まで一貫して担当</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 発注判断担当と入荷確認担当を</span><span class="nb">分ける構成</span></div><pre class="prompt" id="p46">在庫の発注判断から入荷確認までを同じ担当が一貫して行っており、判断が主観的になりがちです。発注判断担当（在庫データに基づく発注要否判定）と入荷確認担当（実際の入荷処理）に分けるグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p46',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p46','template-46.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">47. 複数倉庫の並列管理</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 倉庫ごとの在庫チェックを1人が</span><span class="nb">順番に確認</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 倉庫ごとの担当を置き並列で</span><span class="nb">チェックする構成</span></div><pre class="prompt" id="p47">複数倉庫の在庫チェックを1人が順番に確認しており更新が遅れがちです。倉庫ごとに担当を分け並列でチェックし、統合担当が全社在庫の状況をまとめるグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p47',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p47','template-47.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">48. 需要予測と実績照合の分離</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 需要予測を立てた担当が自分でその</span><span class="nb">答え合わせもしている</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 予測担当と、</span><span class="nb">実績と照合する検証担当を分離</span></div><pre class="prompt" id="p48">需要予測を立てた担当が、その予測の答え合わせも自分で行っており、予測精度の検証が甘くなりがちです。予測担当とは独立して、実績データと照合し精度を検証する担当を置くグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p48',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p48','template-48.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">49. 欠品アラートの独立監視ループ</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 欠品に気づくのが遅く、</span><span class="nb">機会損失が発生している</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 常時監視担当を置き、</span><span class="nb">閾値を下回ったら発注判断担当に</span><span class="nb">通知する構成</span></div><pre class="prompt" id="p49">在庫の欠品に気づくのが遅く、販売機会を逃しています。在庫データを常時監視し、閾値を下回ったらアラートを出す担当と、それを受けて発注判断する担当を分けた常設ループのグラフ構成を提案してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p49',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p49','template-49.md',this)">⬇ ダウンロード</button></div></div>
+<div class="icard"><div class="ititle">50. 棚卸差異の原因分析担当</div><div class="imeta">Before<span class="nb">（ループ）</span><span class="nb">: 棚卸を行った担当が差異の</span><span class="nb">原因分析まで同時にこなす</span><br>After<span class="nb">（グラフ）</span><span class="nb">: 棚卸実施担当と、</span><span class="nb">差異原因を分析する担当を分離</span></div><pre class="prompt" id="p50">棚卸を行った担当が、帳簿との差異の原因分析まで同時にこなしており時間がかかっています。棚卸実施担当（数量確認）と、差異が出た箇所の原因を分析する担当を分けるグラフ構成を設計してください。</pre><div class="cbtns"><button class="btn sm" onclick="copyPrompt('p50',this)">📋 コピー</button><button class="btn sm ghost" onclick="downloadText('p50','template-50.md',this)">⬇ ダウンロード</button></div></div>
+<pre id="pfull" class="hidden"># 業務ループ→グラフ移行テンプレート50選
+
+## SEO記事作成
+
+### 1. キーワード調査と執筆の分割
+- Before（ループ）: 1人のループがキーワード選定→リサーチ→執筆→チェックまで全部担当
+- After（グラフ）: リサーチ担当／執筆担当／チェック担当／統合担当の4人に分割
+
+今、SEO記事作成を1つのループ（キーワード選定→リサーチ→執筆→チェックまで1人で担当）で回しています。これを次のように担当分割したグラフ構成に直してください。
+① リサーチ担当：キーワード調査・競合分析だけをループ
+② 執筆担当：構成案と本文執筆だけをループ
+③ チェック担当：品質採点・修正指示だけをループ（リサーチ担当とは独立した視点で採点）
+④ 統合担当：①〜③の結果を受け取り最終稿にまとめる
+各担当のSKILL.mdの叩き台と、担当間で何を・どんな形式で受け渡すかを提案してください。
+
+### 2. 執筆とファクトチェックの分離
+- Before（ループ）: 執筆者が自分の書いた文章を自分でファクトチェックしている
+- After（グラフ）: 執筆担当と、独立したファクトチェック担当に分離
+
+SEO記事の執筆を1人のループで行い、事実確認も同じ担当がその場で行っています。これを、執筆担当とは別に独立したファクトチェック担当を置くグラフ構成に変えてください。ファクトチェック担当は執筆担当の主張を1件ずつ検証し、根拠が薄い箇所には差し戻しラベルを付けて執筆担当に戻す設計にしてください。
+
+### 3. 公開後リライト判断の独立検証化
+- Before（ループ）: 公開後の順位・アクセスを見て、書いた本人がリライトするか判断
+- After（グラフ）: 分析担当がリライト要否を判定し、執筆担当に指示を出す形に分離
+
+公開済み記事の順位・アクセスを見てリライトするか判断する作業を、担当を分けたグラフ構成にしたいです。①分析担当：GA/GSCのデータを見てリライト要否を判定するループ ②執筆担当：分析担当からの指示だけを受けてリライトするループ、の2担当に分ける設計案をSKILL.md形式で提案してください。
+
+### 4. 複数記事の並列量産
+- Before（ループ）: 1本ずつ順番に記事を作成しているため月産本数が頭打ち
+- After（グラフ）: 記事ごとに独立したループを並列で走らせる構成
+
+SEO記事を1本ずつ順番に作成していて量産のボトルネックになっています。3〜5本を同時並列で進められるグラフ構成（記事ごとに独立したリサーチ→執筆→チェックのループを持たせ、最後に横断でカニバリゼーションチェックする担当を1つ置く）を設計してください。
+
+### 5. 内部リンク設計の専任化
+- Before（ループ）: 執筆担当が本文執筆のついでに内部リンクも手動で選定
+- After（グラフ）: 内部リンク専任担当が全記事を横断してリンク設計する構成に分離
+
+内部リンクの選定を執筆担当が片手間でやっており精度が低いです。執筆担当とは別に、全記事のテーマ・キーワードを横断的に把握して内部リンクだけを設計する専任担当を置くグラフ構成を提案してください。
+
+## カスタマー対応
+
+### 6. 一次受付とエスカレーション判定の分離
+- Before（ループ）: 1人がすべての問い合わせに対応し、難しい案件も自分で判断
+- After（グラフ）: 一次受付担当が振り分け、難易度が高い案件だけエスカレーション担当に渡す構成
+
+カスタマー対応を1つのループで、すべての問い合わせに同じ担当が対応しています。一次受付担当（定型対応・振り分け判定）とエスカレーション担当（複雑案件のみ対応）に分けるグラフ構成を、振り分け基準案つきで提案してください。
+
+### 7. FAQ回答と感情ケアの分離
+- Before（ループ）: 事実確認と、クレーム時の感情的なケアを同じ担当が同時にこなす
+- After（グラフ）: 事実回答担当と、トーン・感情面をケアする担当を分離
+
+クレーム対応で、事実の確認・回答と、お客様の感情面のケアを同じ担当が同時にやっていて文面がちぐはぐになりがちです。事実確認担当が下書きを作り、感情ケア担当がトーンを調整する2段階のグラフ構成を設計してください。
+
+### 8. 複数チャネルの並列処理
+- Before（ループ）: メール・チャット・SNSの問い合わせを1人が順番に処理
+- After（グラフ）: チャネルごとの担当に分割し、並列で処理する構成
+
+メール・チャット・SNSからの問い合わせを1人が順番に処理していて対応が遅れています。チャネルごとに専任担当を置き並列処理し、最後に対応ログを統合担当がまとめるグラフ構成を提案してください。
+
+### 9. クレーム対応の第三者レビュー
+- Before（ループ）: 対応した本人が、自分の対応が適切だったか自己評価している
+- After（グラフ）: 対応担当とは別のレビュー担当が対応後に評価する構成
+
+クレーム対応後、対応した本人が自分の対応を自己評価しており、甘くなりがちです。対応担当とは別に、対応ログをレビューする第三者担当を置き、改善点をフィードバックするループを追加するグラフ構成を設計してください。
+
+### 10. よくある質問の自動更新ループ
+- Before（ループ）: FAQページの更新が手つかずで放置されがち
+- After（グラフ）: 問い合わせ収集担当とFAQ更新担当を分け、定期的に反映する構成
+
+問い合わせ対応の中から『よくある質問』を拾ってFAQページに反映する作業が手つかずです。問い合わせを収集・分類する担当と、それを基にFAQページを更新する担当を分けた、週次で回るグラフ構成を提案してください。
+
+## 経理処理
+
+### 11. 経費精算とチェックの分離
+- Before（ループ）: 申請内容の入力チェックと承認判断を同じ担当が行う
+- After（グラフ）: 入力チェック担当と承認判断担当を分離
+
+経費精算業務で、申請内容のフォーマットチェックと、金額・妥当性の承認判断を同じ担当がまとめて行っています。フォーマットチェック担当（機械的な項目チェック）と承認判断担当（金額・妥当性の判断）に分けるグラフ構成を提案してください。
+
+### 12. 請求書発行と入金確認の分離
+- Before（ループ）: 同じ担当が請求書発行から入金確認まで一貫して追いかける
+- After（グラフ）: 発行担当と入金確認担当を分け、突合担当が最後にマッチングする構成
+
+請求書の発行から入金確認までを1人が一貫して追いかけており、件数が増えると漏れが出ます。発行担当・入金確認担当・突合担当（発行データと入金データを照合）の3担当に分けるグラフ構成を設計してください。
+
+### 13. 月次締め作業の並列化
+- Before（ループ）: 月末に部門ごとの集計を順番に処理していて締めが遅い
+- After（グラフ）: 部門ごとに担当を分け並列集計し、最後に全体統合する構成
+
+月次締め作業で部門ごとの集計を順番に処理しており時間がかかっています。部門ごとに集計担当を分けて並列処理し、最後に統合担当が全社分をまとめるグラフ構成を提案してください。
+
+### 14. 不正検知の独立検証担当
+- Before（ループ）: 経費申請の処理担当が、不正の疑いも同時にチェックしている
+- After（グラフ）: 処理担当とは別に、パターン分析で不正兆候を検知する担当を分離
+
+経費申請の日常処理をしている担当が、不正の兆候チェックも兼務していて見落としが心配です。日常処理担当とは独立して、申請パターンの異常値を検知する担当を置くグラフ構成を設計してください。
+
+### 15. 複数取引先の並列処理
+- Before（ループ）: 取引先ごとの支払処理を1つのループで順番にこなす
+- After（グラフ）: 取引先グループごとに担当を分け並列処理する構成
+
+多数の取引先への支払処理を1つのループで順番にこなしていて締切に追われます。取引先をグループ分けし、グループごとの担当が並列で処理するグラフ構成を提案してください。
+
+## 採用選考
+
+### 16. 書類選考と面接評価の分離
+- Before（ループ）: 同じ担当が書類選考から面接評価まで一貫して判断
+- After（グラフ）: 書類選考担当と面接評価担当を分け、視点の異なる判断にする構成
+
+採用選考で、書類選考も面接評価も同じ担当が一貫して行っており、視点が偏りがちです。書類選考担当（スキル・経歴のスクリーニング）と面接評価担当（独立した評価軸で判断）に分けるグラフ構成を提案してください。
+
+### 17. 複数媒体からの応募並列収集
+- Before（ループ）: 求人媒体ごとの応募を1人が順番にチェック
+- After（グラフ）: 媒体ごとの収集担当を置き、並列で一次スクリーニングする構成
+
+複数の求人媒体からの応募を1人が順番にチェックしており対応が遅れます。媒体ごとに収集・一次スクリーニング担当を置き並列処理し、統合担当が候補者リストをまとめるグラフ構成を設計してください。
+
+### 18. 一次面接官と最終判定の分離
+- Before（ループ）: 同じ面接官が一次面接から最終合否判断まで担当
+- After（グラフ）: 一次面接担当と最終判定担当を分け、独立した視点を確保する構成
+
+一次面接から最終合否判断までを同じ担当者が行っており、第一印象に引きずられがちです。一次面接担当と、その記録だけを見て最終判定する担当を分けるグラフ構成を提案してください。
+
+### 19. リファレンスチェックの独立担当
+- Before（ループ）: 面接担当がリファレンスチェックも兼務している
+- After（グラフ）: 面接担当とは別にリファレンスチェック専任担当を置く構成
+
+面接担当がリファレンスチェックも兼務しており負荷が高いです。面接担当とは独立してリファレンスチェックだけを行う担当を置き、結果を最終判定担当に渡すグラフ構成を設計してください。
+
+### 20. 内定者フォローの継続ループ
+- Before（ループ）: 内定を出した後のフォローが手薄になりがち
+- After（グラフ）: 採用担当とは別に内定者フォロー専任のループを常設する構成
+
+内定を出した後のフォローが属人化し、辞退につながっています。選考担当とは別に、内定から入社日まで定期的にフォローする専任ループ（トリガー：内定日／タスク：定期連絡／成功基準：入社確約の維持）を設計してください。
+
+## SNS運用
+
+### 21. 投稿作成と炎上チェックの分離
+- Before（ループ）: 投稿を作った本人がそのまま公開判断もしている
+- After（グラフ）: 投稿作成担当と、公開前にリスクチェックする担当を分離
+
+SNS投稿を作成した本人がそのまま公開判断もしており、炎上リスクの見落としが心配です。投稿作成担当と、公開前にリスク・炎上要因をチェックする担当を分けるグラフ構成を提案してください。
+
+### 22. 複数プラットフォームの並列投稿
+- Before（ループ）: X・Instagram・TikTokへの投稿を1人が順番に作成
+- After（グラフ）: プラットフォームごとの担当を置き並列で最適化する構成
+
+X・Instagram・TikTokへの投稿を1人が順番に作成しており、各媒体の特性に合わせきれていません。プラットフォームごとに担当を分け、それぞれの文脈に最適化した投稿を並列で作るグラフ構成を設計してください。
+
+### 23. コメント対応とインフルエンサー対応の分離
+- Before（ループ）: 一般コメントへの返信と、インフルエンサーからの言及対応を同じ担当が処理
+- After（グラフ）: 一般コメント対応担当と、重要アカウント対応担当を分離
+
+一般コメントへの返信と、インフルエンサーなど重要アカウントからの言及への対応を同じ担当が処理しており、後者が埋もれがちです。一般コメント対応担当と、フォロワー数等で重要度が高い言及だけを扱う担当を分けるグラフ構成を提案してください。
+
+### 24. 効果測定の独立検証
+- Before（ループ）: 投稿担当が自分の投稿の効果も自己評価している
+- After（グラフ）: 投稿担当とは別に、数値だけを見て評価する分析担当を分離
+
+投稿を作った担当が、自分の投稿の効果測定も行っており評価が甘くなりがちです。投稿担当とは独立して、エンゲージメント数値だけを見て評価する分析担当を置くグラフ構成を設計してください。
+
+### 25. トレンド収集の常時ループ
+- Before（ループ）: 投稿ネタ探しをその都度手動で行っている
+- After（グラフ）: トレンド収集担当を常設し、投稿作成担当にネタを供給する構成
+
+投稿のネタ探しをその都度手動で行っており、ネタ切れが頻発します。常時トレンドを収集する担当（トリガー：定期実行／タスク：トレンド収集／成功基準：ネタ候補◯件）を置き、投稿作成担当に供給するグラフ構成を提案してください。
+
+## 動画編集
+
+### 26. カット編集とテロップ作成の分離
+- Before（ループ）: 同じ担当がカット編集からテロップ入れまで一貫作業
+- After（グラフ）: カット担当とテロップ担当を分け並列で進める構成
+
+動画編集で、カット編集からテロップ入れまでを同じ担当が一貫して行っており時間がかかります。カット担当とテロップ担当を分け、カット確定後に並列でテロップ作業を進めるグラフ構成を設計してください。
+
+### 27. 本編とサムネイル制作の並列化
+- Before（ループ）: 本編の編集が終わってからサムネイルに着手している
+- After（グラフ）: 本編担当とサムネイル担当を並列で走らせる構成
+
+本編の編集が終わってからサムネイル制作に着手しており公開が遅れます。本編担当とサムネイル担当（企画段階の情報だけで並行着手）を並列で走らせるグラフ構成を提案してください。
+
+### 28. 音声チェックと画質チェックの分離
+- Before（ループ）: 1人が音声・画質どちらもまとめて最終チェック
+- After（グラフ）: 音声チェック担当と画質チェック担当を分ける構成
+
+動画の最終チェックで音声と画質を1人がまとめて確認しており見落としがあります。音声チェック担当と画質チェック担当に分け、それぞれ専門的な基準でチェックするグラフ構成を設計してください。
+
+### 29. 複数案件の並列進行管理
+- Before（ループ）: 案件を1本ずつ順番に編集しているため納期がひっ迫
+- After（グラフ）: 案件ごとに独立した編集ループを並列で走らせる構成
+
+動画案件を1本ずつ順番に編集しており納期がひっ迫しています。案件ごとに独立した編集ループを並列で走らせ、進行管理担当が全体の進捗を横断で見るグラフ構成を提案してください。
+
+### 30. 公開後の反応分析ループ
+- Before（ループ）: 公開後の視聴維持率などの分析が手つかず
+- After（グラフ）: 編集担当とは別に分析担当を置き、次回編集にフィードバックする構成
+
+公開後の視聴維持率・離脱ポイントの分析が手つかずになっています。編集担当とは別に、公開後のデータ分析だけを行う担当を置き、その結果を次回編集の改善点として渡すグラフ構成を設計してください。
+
+## 広告運用
+
+### 31. クリエイティブ制作と審査チェックの分離
+- Before（ループ）: 制作した本人がそのまま媒体の審査基準もチェックしている
+- After（グラフ）: 制作担当と審査基準チェック担当を分離
+
+広告クリエイティブを作った本人がそのまま媒体の審査基準チェックも行っており、リジェクトが多発しています。制作担当と、各媒体の審査基準に特化してチェックする担当を分けるグラフ構成を提案してください。
+
+### 32. 複数媒体の並列出稿管理
+- Before（ループ）: Google・Meta・Xへの出稿を1人が順番に設定
+- After（グラフ）: 媒体ごとの運用担当を置き並列で管理する構成
+
+Google・Meta・Xへの広告出稿設定を1人が順番に行っており対応が追いつきません。媒体ごとに運用担当を分け並列で管理し、統合担当が全体の予算配分を見るグラフ構成を設計してください。
+
+### 33. 入札調整と予算管理の分離
+- Before（ループ）: 同じ担当が入札調整と全体予算管理を兼務
+- After（グラフ）: 入札調整担当と予算管理担当を分ける構成
+
+広告の入札調整と全体の予算管理を同じ担当が兼務しており、日々の調整に追われて全体最適が見えていません。入札調整担当（日々の細かい調整）と予算管理担当（週次の全体配分判断）に分けるグラフ構成を提案してください。
+
+### 34. 効果検証の独立担当
+- Before（ループ）: 運用担当が自分の運用結果を自己評価している
+- After（グラフ）: 運用担当とは別に、数値だけを見る効果検証担当を分離
+
+広告運用担当が自分の運用結果を自己評価しており、都合よく解釈しがちです。運用担当とは独立して、数値データだけを見て効果検証する担当を置くグラフ構成を設計してください。
+
+### 35. クリエイティブの自動差し替えループ
+- Before（ループ）: 疲弊したクリエイティブの差し替えが後手に回る
+- After（グラフ）: 監視担当が疲弊を検知し、制作担当に差し替え指示を出す構成
+
+広告クリエイティブが疲弊（CTR低下）しても差し替えが後手に回っています。指標を常時監視する担当と、疲弊を検知したら新規クリエイティブを作る担当を分けた常時ループのグラフ構成を提案してください。
+
+## 営業事務
+
+### 36. 見積作成と承認確認の分離
+- Before（ループ）: 見積を作成した担当がそのまま承認可否も判断
+- After（グラフ）: 見積作成担当と承認確認担当を分離
+
+見積書の作成と、社内承認可否の確認を同じ担当が行っており、チェックが甘くなりがちです。見積作成担当と、金額・条件の妥当性を確認する承認確認担当を分けるグラフ構成を設計してください。
+
+### 37. 複数案件の並列進捗管理
+- Before（ループ）: 案件ごとの進捗確認を1人が順番に行っている
+- After（グラフ）: 案件担当ごとに分け、統括担当が横断で全体を見る構成
+
+複数の営業案件の進捗確認を1人が順番に行っており抜け漏れが心配です。案件担当ごとにフォローを分担し、統括担当が全案件の進捗を横断で確認するグラフ構成を提案してください。
+
+### 38. 契約書チェックの独立担当
+- Before（ループ）: 営業担当が契約書の内容チェックも自分で行う
+- After（グラフ）: 営業担当とは別に契約書チェック専任担当を置く構成
+
+営業担当が契約書の内容チェックも自分で行っており、リスク条項の見落としが心配です。営業担当とは独立して契約書の条項をチェックする専任担当を置くグラフ構成を設計してください。
+
+### 39. 顧客フォローの継続ループ
+- Before（ループ）: 受注後の顧客フォローが手薄になりがち
+- After（グラフ）: 営業担当とは別に、フォロー専任の常設ループを置く構成
+
+受注後の顧客フォローが後回しになり、リピートにつながっていません。新規営業担当とは別に、既存顧客への定期フォローだけを行う常設ループ（トリガー：定期実行／タスク：状況確認連絡／成功基準：継続意向の確認）を設計してください。
+
+### 40. 失注理由の分析担当分離
+- Before（ループ）: 営業担当が自分の失注理由を自己分析している
+- After（グラフ）: 営業担当とは別に失注理由を横断分析する担当を分離
+
+失注理由の分析を営業担当本人が行っており、自己都合の解釈になりがちです。営業担当とは独立して、複数案件の失注理由を横断的に分析する担当を置くグラフ構成を提案してください。
+
+## 人事労務
+
+### 41. 勤怠チェックと給与計算の分離
+- Before（ループ）: 同じ担当が勤怠の異常チェックと給与計算を一貫処理
+- After（グラフ）: 勤怠チェック担当と給与計算担当を分ける構成
+
+勤怠の異常チェックと給与計算を同じ担当が一貫して処理しており、繁忙期にミスが増えます。勤怠チェック担当（異常値の検出）と給与計算担当（確定した勤怠データの計算処理）に分けるグラフ構成を提案してください。
+
+### 42. 複数拠点の並列処理
+- Before（ループ）: 拠点ごとの労務処理を1人が順番にこなす
+- After（グラフ）: 拠点ごとの担当を置き並列処理する構成
+
+複数拠点の労務処理を1人が順番にこなしており月末に処理が集中します。拠点ごとに担当を分け並列処理し、統合担当が全社データをまとめるグラフ構成を設計してください。
+
+### 43. 問い合わせ対応と規定改定の分離
+- Before（ループ）: 日々の問い合わせ対応をしながら規定改定の検討も同時進行
+- After（グラフ）: 問い合わせ対応担当と規定改定検討担当を分ける構成
+
+従業員からの日々の問い合わせ対応をしながら、就業規則の改定検討も同時に進めており、どちらも中途半端になっています。日々の問い合わせ対応担当と、規定改定を専任で検討する担当に分けるグラフ構成を提案してください。
+
+### 44. 入退社手続きの並列進行
+- Before（ループ）: 入社手続きと退社手続きを1人が順番に処理
+- After（グラフ）: 入社担当と退社担当を分け並列で進める構成
+
+入社手続きと退社手続きを1人が順番に処理しており、繁忙期（期初・期末）に対応が遅れます。入社手続き担当と退社手続き担当を分け、並列で進めるグラフ構成を設計してください。
+
+### 45. 労務相談の独立エスカレーション
+- Before（ループ）: 一般的な問い合わせと、ハラスメント等の重い相談を同じ窓口で対応
+- After（グラフ）: 一次窓口担当と、専門対応が必要な相談のエスカレーション担当を分離
+
+一般的な問い合わせと、ハラスメント等の重い相談を同じ窓口担当がまとめて対応しており対応品質にばらつきがあります。一次窓口担当（振り分け）と、重い相談だけを専門的に扱うエスカレーション担当に分けるグラフ構成を提案してください。
+
+## 在庫管理
+
+### 46. 発注判断と入荷確認の分離
+- Before（ループ）: 同じ担当が発注判断から入荷確認まで一貫して担当
+- After（グラフ）: 発注判断担当と入荷確認担当を分ける構成
+
+在庫の発注判断から入荷確認までを同じ担当が一貫して行っており、判断が主観的になりがちです。発注判断担当（在庫データに基づく発注要否判定）と入荷確認担当（実際の入荷処理）に分けるグラフ構成を設計してください。
+
+### 47. 複数倉庫の並列管理
+- Before（ループ）: 倉庫ごとの在庫チェックを1人が順番に確認
+- After（グラフ）: 倉庫ごとの担当を置き並列でチェックする構成
+
+複数倉庫の在庫チェックを1人が順番に確認しており更新が遅れがちです。倉庫ごとに担当を分け並列でチェックし、統合担当が全社在庫の状況をまとめるグラフ構成を提案してください。
+
+### 48. 需要予測と実績照合の分離
+- Before（ループ）: 需要予測を立てた担当が自分でその答え合わせもしている
+- After（グラフ）: 予測担当と、実績と照合する検証担当を分離
+
+需要予測を立てた担当が、その予測の答え合わせも自分で行っており、予測精度の検証が甘くなりがちです。予測担当とは独立して、実績データと照合し精度を検証する担当を置くグラフ構成を設計してください。
+
+### 49. 欠品アラートの独立監視ループ
+- Before（ループ）: 欠品に気づくのが遅く、機会損失が発生している
+- After（グラフ）: 常時監視担当を置き、閾値を下回ったら発注判断担当に通知する構成
+
+在庫の欠品に気づくのが遅く、販売機会を逃しています。在庫データを常時監視し、閾値を下回ったらアラートを出す担当と、それを受けて発注判断する担当を分けた常設ループのグラフ構成を提案してください。
+
+### 50. 棚卸差異の原因分析担当
+- Before（ループ）: 棚卸を行った担当が差異の原因分析まで同時にこなす
+- After（グラフ）: 棚卸実施担当と、差異原因を分析する担当を分離
+
+棚卸を行った担当が、帳簿との差異の原因分析まで同時にこなしており時間がかかっています。棚卸実施担当（数量確認）と、差異が出た箇所の原因を分析する担当を分けるグラフ構成を設計してください。
+
+---
+以上、50個です。内訳はSEO記事作成5件、カスタマー対応5件、経理処理5件、採用選考5件、SNS運用5件、動画編集5件、広告運用5件、営業事務5件、人事労務5件、在庫管理5件。</pre>
+<footer>AIエージェント/Kawaru ｜ このプレゼントは自由に使ってください</footer>
+<script>
+function copyTextWithFallback(text){
+  function fb(){try{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();
+    const ok=document.execCommand('copy');ta.remove();return ok;}catch(e){return false;}}
+  if(navigator.clipboard&&navigator.clipboard.writeText){return navigator.clipboard.writeText(text).then(()=>true).catch(fb);}
+  return Promise.resolve(fb());
+}
+function showCopyResult(btn,ok){const o=btn.dataset.o||btn.textContent;btn.dataset.o=o;
+  btn.textContent=ok?'✔ コピーしました':'✖ コピー不可 → ⬇をご利用ください';setTimeout(()=>{btn.textContent=o;},ok?1600:3200);}
+async function copyPrompt(id,btn){const ok=await copyTextWithFallback(document.getElementById(id).textContent);showCopyResult(btn,ok);}
+function downloadText(id,fn,btn){try{const t=document.getElementById(id).textContent;const b=new Blob([t],{type:'text/plain;charset=utf-8'});
+  const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=fn;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(u),2000);}catch(e){if(btn){const o=btn.textContent;btn.textContent='✖ 保存不可';setTimeout(()=>{btn.textContent=o;},3000);}}}
+</script></div></body></html>
